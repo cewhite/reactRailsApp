@@ -20,8 +20,10 @@ componentDidMount() {
 });
  <AllItems items={this.state.items} />
 var items= this.props.items.map((item) => {
-   handleSubmit(item) {
-        console.log(item);
-      }
-    },
+   handleSubmit(item)
+    var newState = this.state.items.concat(item);
+    this.setState({ items: newState })
+
+    });
+
     <NewItem handleSubmit={this.handleSubmit}/>
